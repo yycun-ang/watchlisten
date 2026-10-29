@@ -28,11 +28,18 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
+      - name: Set up Android SDK command-line tools
+        uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4
+        with:
+          cmdline-tools-version: '15859902'
+          log-accepted-android-sdk-licenses: false
       - name: Install Android SDK packages
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - name: Run tests and build unsigned release
         run: |
+          python3 --version
           chmod +x gradlew
-          ./gradlew --no-daemon :app:testDebugUnitTest :lyrics-core:check :app:assembleRelease
+          ./gradlew --no-daemon -PpythonExe=python3 :app:testDebugUnitTest :lyrics-core:check :app:assembleRelease
       - name: Confirm unsigned output
         run: test -f app/build/outputs/apk/release/app-release-unsigned.apk
+
