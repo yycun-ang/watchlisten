@@ -1,0 +1,9 @@
+<resources>
+    <style name="AppTheme" parent="WatchTheme">
+        <!-- 单 Activity 的页面返回由宿主统一处理，不能同时关闭整个窗口。 -->
+        <item name="android:windowSwipeToDismiss">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:statusBarColor">#000000</item>
+    </style>
+</resources>

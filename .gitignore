@@ -1,0 +1,10 @@
+.gradle/
+.idea/
+.kotlin/
+local.properties
+**/build/
+*.iml
+keystores/
+__pycache__/
+*.pyc
+*.private.json

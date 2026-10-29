@@ -1,0 +1,33 @@
+// Reuse this machine's development key for debug updates. It is never used by Release.
+def developmentAlias = 'watchlisten'
+def developmentKey = rootProject.layout.projectDirectory.file('keystores/watchlisten-debug.jks')
+
+def ensureDevelopmentKey = tasks.register('ensureDevelopmentKey') {
+    outputs.file(developmentKey)
+    doLast {
+        def key = developmentKey.asFile
+        if (key.exists()) return
+        if (!key.parentFile.mkdirs() && !key.parentFile.isDirectory()) {
+            throw new GradleException('Cannot create the local development keystore directory')
+        }
+        def executable = new File(System.getProperty('java.home'), 'bin/keytool.exe')
+        if (!executable.exists()) executable = new File(System.getProperty('java.home'), 'bin/keytool')
+        exec {
+            commandLine executable, '-genkeypair', '-keystore', key,
+                    '-storepass', 'android', '-keypass', 'android', '-alias', developmentAlias,
+                    '-keyalg', 'RSA', '-keysize', '2048', '-validity', '3650',
+                    '-dname', 'CN=WatchListen Development', '-noprompt'
+        }
+    }
+}
+
+android.signingConfigs.debug {
+    storeFile developmentKey.asFile
+    storePassword 'android'
+    keyAlias developmentAlias
+    keyPassword 'android'
+}
+
+tasks.matching { it.name == 'validateSigningDebug' }.configureEach {
+    dependsOn ensureDevelopmentKey
+}

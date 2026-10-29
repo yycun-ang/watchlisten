@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <title>腕上听 · 开放声环</title>
+  <circle cx="64" cy="64" r="64" fill="#07121C"/>
+  <path d="M64 24a40 40 0 1 0 40 40" stroke="#28D9ED" stroke-width="10" stroke-linecap="round"/>
+  <path d="M46 59v16m18-32v42m18-30v18" stroke="#28D9ED" stroke-width="10" stroke-linecap="round"/>
+</svg>

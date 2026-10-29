@@ -1,0 +1,31 @@
+This application includes a modified UI layout from Google Horologist.
+
+Original file: ControlButtonLayout.kt
+Copyright 2022 The Android Open Source Project
+Licensed under the Apache License, Version 2.0.
+
+Adapted as PlayerControlLayout.kt for standard Compose and API 30.
+Modifications: compact 52dp middle slot, centered side controls, application callbacks.
+
+The complete license is included at assets/licenses/Horologist-Apache-2.0.txt.
+Source and adaptation details: research/watch-ui-github-reference.md.
+
+The account request signing, raw RSA protocol and QR states reference
+MakcRe/KuGouMusicApi, commit 514f870db7e60ca37bc5535be5da36d32b571c6f.
+Copyright (c) 2023 MakcRe. Licensed under the MIT License.
+The complete notice is at assets/licenses/Kugou-reference-MIT.txt.
+No upstream server, user tokens, or proprietary media assets are bundled.
+
+The v0.7 catalog endpoints (cloud playlists, charts, featured playlists,
+hot search, daily recommendations and album tracks) additionally reference
+MakcRe/KuGouMusicApi, commit 62730f900dc9fdc51396a663b3d33a6c4c704046.
+Copyright (c) 2023 MakcRe. Licensed under the MIT License.
+Catalog transport, parsing, paging and watch UI are implemented natively.
+Research scope and attribution: research/kugou-landscape-v7.md.
+
+The v0.9 cloud favorites and playlist write protocols additionally reference
+MakcRe/KuGouMusicApi, commit 5d6c9f7b180279c9dd08bc6f7159de52a856d587,
+and KuGouApi_Kotlin_SDK, commit de18caa9ddb29aca788a79ac05bf9bc338810a3f.
+Copyright (c) 2023 MakcRe. Licensed under the MIT License.
+Cloud request encryption, transport and state management are implemented natively.
+Research scope and attribution: research/cloud-library-v9.md.

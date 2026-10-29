@@ -1,0 +1,44 @@
+name: 问题反馈
+description: 报告可复现的播放、账号、传歌或界面问题
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请只提交与问题有关的信息，遮挡账号、登录二维码、验证码和网络地址；不要上传原始歌曲或账号凭据。
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本
+      placeholder: 例如 0.10.0，来自本仓库 Release
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 手表型号与系统版本
+      placeholder: 例如 OPPO Watch X / Android 11
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 如何复现
+      description: 写清从哪个页面开始、点了什么、多久出现问题。
+      placeholder: |
+        1. 打开……
+        2. 点按……
+        3. 出现……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 补充说明、截图或本机诊断
+      description: 可选。先检查内容，勿公开账号、二维码、验证码和访问地址。

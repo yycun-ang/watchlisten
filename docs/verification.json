@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "releaseDate": "2026-10-30",
+  "appName": "腕上听",
+  "author": "存存",
+  "packageName": "com.watchlisten.music",
+  "versionName": "0.10.0",
+  "versionCode": 16,
+  "minSdk": 30,
+  "consentDocumentVersion": 5,
+  "artifact": {
+    "fileName": "WatchListen-0.10.0.apk",
+    "bytes": 5764026,
+    "sha256": "d89b6c69e4ebe6f1d9677a941d444935da23f50a43e185ab94e2d2b79a2d9f1b"
+  },
+  "signing": {
+    "independentReleaseKey": true,
+    "primaryScheme": "APK Signature Scheme v3",
+    "certificateSha256": "b95db91ab6d819659758fadb4850d278f3aeec058621f8600161bd08c1fc7b3d",
+    "legacyCertificateLineageIncluded": true,
+    "compatibilityBlockVerified": true,
+    "privateKeyPublished": false
+  },
+  "localVerification": {
+    "publicSnapshotBuildPassed": true,
+    "appUnitTests": {"passed": 442, "failures": 0, "errors": 0, "skipped": 0},
+    "lyricsCoreChecks": {"passed": 57, "failed": 0, "data": "synthetic fixtures"},
+    "releaseR8AndResourceShrinkingPassed": true,
+    "lintVitalPassed": true
+  },
+  "physicalWatch": {
+    "model": "OWW231",
+    "androidSdk": 30,
+    "upgradeFromVersion": "0.8.0",
+    "upgradeWithoutUninstall": true,
+    "appUidPreserved": true,
+    "firstInstallTimePreserved": true,
+    "accountSessionPreserved": true,
+    "userConfirmedConsentDocument": true,
+    "authenticatedCloudFavoritesReadVerified": true,
+    "uiChecksPassed": 9,
+    "playbackChecksPassed": 3,
+    "realKugouPlaybackVerified": true,
+    "pauseVerified": true,
+    "oneLevelBackNavigationVerified": true,
+    "fatalExceptionObservedDuringUiChecks": false
+  },
+  "notFullyVerified": [
+    "real account cloud library mutations",
+    "VIP accounts and different copyright or regional entitlements",
+    "real phone Kugou DLNA interoperability",
+    "other watch models and firmware combinations"
+  ],
+  "containsDeviceSerialOrAccountData": false
+}
